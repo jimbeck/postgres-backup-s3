@@ -1,4 +1,4 @@
-FROM postgres:13.2
+FROM alpine:3.13
 
 ADD src/install.sh install.sh
 RUN sh install.sh && rm install.sh
