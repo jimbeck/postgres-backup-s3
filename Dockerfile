@@ -1,5 +1,4 @@
-ARG ALPINE_VERSION
-FROM alpine:${ALPINE_VERSION}
+FROM postgres:13.2
 
 ADD src/install.sh install.sh
 RUN sh install.sh && rm install.sh
