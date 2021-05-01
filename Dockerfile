@@ -1,8 +1,7 @@
-ARG ALPINE_VERSION
-FROM alpine:${ALPINE_VERSION}
+FROM alpine:3.13
 
 ADD src/install.sh install.sh
-RUN sh install.sh && rm install.sh
+RUN ./install.sh && rm install.sh
 
 ENV POSTGRES_DATABASE ''
 ENV POSTGRES_HOST ''
